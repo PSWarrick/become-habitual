@@ -5,12 +5,38 @@
   align-items: center;
   width: 100%;
   position: relative;
+  border: none;
+  outline: none;
+}
+
+input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-black);
+}
+
+input.submit {
+  cursor: pointer;
+}
+
+.sign-up {
+  display: flex;
+  border-bottom: solid 1px #181818;
+  padding-bottom: 10px;
+  width: 250px;
+}
+
+.email-input {
+  /* this will tell our input to stretch out and 
+  fill the available space  */
+  flex: 1;
 }
 
 @media screen and (min-width: 750px) {
   .newsletter-form {
     align-items: flex-start;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     max-width: 36rem;
   }
 }
@@ -21,6 +47,8 @@
 
 .newsletter-form__field-wrapper .field__input {
   padding-right: 5rem;
+  outline: unset !important;
+      border: unset !important;
 }
 
 .newsletter-form__message {

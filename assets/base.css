@@ -149,6 +149,15 @@
   --color-icon: rgb(var(--color-base-outline-button-labels));
 }
 
+:root {
+
+  --text-white: #FFFFFB;
+  --white: #FFFFFB;
+  --text-black: #121212;
+  --button: #121212; 
+
+}
+
 /* base */
 
 .no-js:not(html) {
@@ -184,7 +193,7 @@ html.no-js .no-js-hidden {
 
 @media screen and (min-width: 750px) {
   .page-width {
-    padding: 0 5rem;
+    padding: 0 2rem;
   }
 
   .page-width--narrow {
@@ -256,7 +265,7 @@ body,
 .color-inverse,
 .color-accent-1,
 .color-accent-2 {
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--text-black);
   background-color: rgb(var(--color-background));
 }
 
@@ -347,6 +356,7 @@ body,
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
+  color:var(--text-black);
 }
 
 h1,
@@ -364,7 +374,7 @@ h5,
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
-  color: rgb(var(--color-foreground));
+  color: var(--text-black);
   line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
 }
 
@@ -486,7 +496,6 @@ blockquote {
 .customer .field input,
 .customer select,
 .field__input,
-.form__label,
 .select__select {
   font-size: 1.3rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
@@ -569,19 +578,20 @@ h6:empty {
 .link,
 .customer a {
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   border: none;
   box-shadow: none;
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 0.3rem;
-  color: rgb(var(--color-link));
+  color: var(--text-black);
   background-color: transparent;
   font-size: 1.4rem;
   font-family: inherit;
 }
 
 .link--text {
-  color: rgb(var(--color-foreground));
+  color: var(--text-black);
 }
 
 .link--text:hover {
@@ -1792,16 +1802,17 @@ input[type='checkbox'] {
 }
 
 .cart-count-bubble {
-  position: absolute;
-  background-color: rgb(var(--color-button));
+  /* position: absolute; */
+  text-decoration: none;
   color: rgb(var(--color-button-text));
   height: 1.7rem;
   width: 1.7rem;
+  margin-left: 4px;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 14px;
   bottom: 0.8rem;
   left: 2.2rem;
   line-height: calc(1 + 0.1 / var(--font-body-scale));
@@ -1942,7 +1953,7 @@ input[type='checkbox'] {
 
 .header__heading-link {
   display: inline-block;
-  padding: 0.75rem;
+  /* padding: 0.75rem; */
   text-decoration: none;
   word-break: break-word;
 }
@@ -2198,7 +2209,7 @@ details[open] > .header__icon--menu .icon-hamburger {
   margin-left: 0;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1990px) {
   .header__inline-menu {
     display: block;
   }
@@ -2334,10 +2345,25 @@ details-disclosure > details {
 }
 
 .gradient {
-  background: var(--color-background);
-  background: var(--gradient-background);
+  /* background-image: url("pexels-anna-shvets-50695642-hero.jpg"); */
+  background-color: var(--white);
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+.header {
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.header span {
+  color: var(--text-black);
+  text-decoration: none;
+}
+
+
 
 @media screen and (forced-colors: active) {
   .icon {
@@ -2349,4 +2375,5 @@ details-disclosure > details {
     stroke: CanvasText;
   }
 }
+
 

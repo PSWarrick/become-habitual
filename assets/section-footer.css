@@ -1,15 +1,17 @@
 .footer {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
-}
+  border-top: 0.1rem solid var(--text-black);
+} 
 
 .footer:not(.color-background-1) {
   border-top: none;
 }
 
 .footer__content-top {
-  padding-bottom: 5rem;
-  padding-top: 5rem;
-  display: block;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media screen and (max-width: 749px) {
@@ -39,7 +41,7 @@
   .footer__content-top .grid {
     margin-left: -3rem;
     row-gap: 6rem;
-    margin-bottom: 0;
+    margin-bottom: 0px;
   }
 
   .footer__content-top .grid__item {
@@ -154,7 +156,7 @@
   }
 }
 
-.footer-block__heading {
+ .footer-block__heading {
   margin-bottom: 2rem;
   margin-top: 0;
   font-size: calc(var(--font-heading-scale) * 1.6rem);
@@ -164,7 +166,7 @@
   .footer-block__heading {
     font-size: calc(var(--font-heading-scale) * 1.8rem);
   }
-}
+} 
 
 .footer__list-social:empty,
 .footer-block--newsletter:empty {
@@ -177,7 +179,7 @@
 
 .footer-block__newsletter {
   text-align: center;
-}
+} 
 
 .newsletter-form__field-wrapper {
   max-width: 36rem;
@@ -245,7 +247,7 @@
   display: inline-flex;
   flex-wrap: wrap;
   flex: initial;
-  padding: 1rem 0;
+  padding: 1rem 0; 
 }
 
 .localization-form:only-child .button,
@@ -262,7 +264,7 @@
 
 @media screen and (min-width: 750px) {
   .footer__localization {
-    padding: 0.4rem 0;
+     padding: 0.4rem 0; 
     justify-content: flex-start;
   }
 
@@ -382,15 +384,15 @@ noscript .localization-selector.link {
   }
 }
 
-/* .footer__copyright a {
+.footer__copyright a {
   font-size: 1.3rem;
   text-decoration: none;
-  color: currentColor;
+
 }
 
 .footer__copyright a:hover {
-  opacity: 0.75;
-} */
+  text-decoration: none;
+} 
 
 @keyframes appear-down {
   0% {
@@ -403,14 +405,17 @@ noscript .localization-selector.link {
   }
 }
 
-.footer-block__details-content {
-  margin-bottom: 4rem;
-}
+ .footer-block__details-content {
+  margin-bottom: -10px;
+  margin-top: 10px;
+}   
+
 
 @media screen and (min-width: 750px) {
-  .footer-block__details-content {
-    margin-bottom: 0;
-  }
+   /* .footer-block__details-content {
+    margin-bottom: -3px;
+    margin-top: 10px;
+  }  */
 
   .footer-block__details-content > p,
   .footer-block__details-content > li {
@@ -424,10 +429,9 @@ noscript .localization-selector.link {
   .footer-block__details-content > li:not(:last-child) {
     margin-right: 1.5rem;
   }
-}
+} 
 
-.footer-block__details-content .list-menu__item--link,
-.copyright__content a {
+.footer-block__details-content .list-menu__item--link {
   color: rgba(var(--color-foreground), 0.75);
 }
 
@@ -438,9 +442,9 @@ noscript .localization-selector.link {
 
 @media screen and (min-width: 750px) {
   .footer-block__details-content .list-menu__item--link:hover,
-  .copyright__content a:hover {
+   a:hover {
     color: rgb(var(--color-foreground));
-    text-decoration: underline;
+    text-decoration: none;
     text-underline-offset: 0.3rem;
   }
 
@@ -449,12 +453,12 @@ noscript .localization-selector.link {
   }
 }
 
-@media screen and (max-width: 989px) {
+ @media screen and (max-width: 989px) {
   .footer-block__details-content .list-menu__item--link {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-}
+} 
 
 @media screen and (min-width: 750px) {
   .footer-block__details-content .list-menu__item--link {
@@ -482,7 +486,7 @@ noscript .localization-selector.link {
 }
 
 .copyright__content a {
-  color: currentColor;
+  color: var(--text-black);
   text-decoration: none;
 }
 
@@ -501,7 +505,7 @@ noscript .localization-selector.link {
 .footer .disclosure__link {
   padding: 0.95rem 3.5rem 0.95rem 2rem;
   color: rgba(var(--color-foreground), 0.75);
-}
+} 
 
 .footer .disclosure__link:hover {
   color: rgb(var(--color-foreground));
@@ -509,4 +513,22 @@ noscript .localization-selector.link {
 
 .footer .disclosure__link--active {
   text-decoration: underline;
+}
+
+ .copyright__content {
+  margin-top: 0px;
+  color: var(--text-black);
+} 
+
+.form {
+  margin: 0 0 15px 0;
+}
+
+.form h3 {
+  font-size: 14px;
+}  
+
+.footer-block__details-content .list-menu__item--link {
+  color: var(--text-black);
+  font-size: 13px;
 }
