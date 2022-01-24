@@ -33,7 +33,7 @@
       <div class="collection page-width">
         <div class="loading-overlay gradient"></div>
 
-        <ul id="product-grid" data-id="{{ section.id }}" class="
+        <!-- <ul id="product-grid" data-id="{{ section.id }}" class="
           grid grid--2-col negative-margin product-grid
           {% if collection.products_count < 4 %} grid--{{ collection.products_count }}-col-tablet{% else %}
             {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}
@@ -51,7 +51,30 @@
               %}
             </li>
           {%- endfor -%}
-        </ul>
+        </ul> -->
+
+       
+        <div class="product-grid-wrapper">
+          <div class="products-grid">
+            <div class="grid-item text">
+              <h2>Made for You</h2>
+              <span>We believe that skincare should be accesible and made with ingredients that are both good for your skin and the environment.</span>
+            </div>
+            <div class="grid-item"> 
+            </div>
+            {% for product in collection.products %}
+            <div class="grid-item">
+              <a href="{{ product.url }}">
+                <img src="{{ product.featured_image | img_url: '480x' }}"/> 
+              </a>
+              <div class="grid-product-info">
+              <a href="{{ product.url }}"><span>{{ product.title }}</span></a>
+                <span>{{ product.price | money_without_trailing_zeros }}</span>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+      </div>
 
         {%- if paginate.pages > 1 -%}
           {% render 'pagination', paginate: paginate, anchor: '' %}

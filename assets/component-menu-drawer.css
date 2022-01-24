@@ -1,5 +1,6 @@
 .header__icon--menu {
   position: initial;
+  z-index: 100;
 }
 
 .js menu-drawer > details > summary::before,
@@ -28,7 +29,7 @@ menu-drawer > details[open] > summary::before {
     visibility var(--duration-default) ease;
 }
 
-.menu-drawer {
+/* .menu-drawer {
   position: absolute;
   transform: translateX(-100%);
   visibility: hidden;
@@ -41,14 +42,46 @@ menu-drawer > details[open] > summary::before {
   border-left: 0;
   background-color: rgb(var(--color-background));
   overflow-x: hidden;
-}
+} */
 
-.js .menu-drawer {
+
+ .menu-drawer {
+  position: fixed;
+  transform: translateX(-100%);
+  visibility: hidden;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 350px;
+  height: 100%;
+  padding: 0;
+  border: none;
+  border-right: 1px solid black;
+  background-color: #ffffff;
+  overflow-x: hidden;
+} 
+
+.divider {
+  height: 1px;
+	width: 251px;
+	background-color: #0F0E06;
+	margin-bottom: 30px;
+} 
+
+
+
+/* .js .menu-drawer {
   height: calc(100vh - 100%);
   height: calc(
     var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%))
   );
-}
+} */
+
+/* .js .menu-drawer {
+  height: 100vh;
+} */
+
+
 
 .js details[open] > .menu-drawer,
 .js details[open] > .menu-drawer__submenu {

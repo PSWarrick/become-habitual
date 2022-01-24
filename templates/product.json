@@ -56,7 +56,7 @@
     "164264922260610461": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"product-images\">\n<img class=\"product-image-1\" src=\"{{ 'pexels-anna-shvets-5069560.jpg' | asset_url }}\" \/>\n\n<div class=\"product-image\">\n<div class=\"overlay\"><\/div>\n<img class=\"product-image-2\" src=\"{{ 'pexels-anna-shvets-5069564.jpg' | asset_url }}\" \/>\n<\/div><\/div>"
+        "custom_liquid": "<div class=\"product-images\">\n<img class=\"product-image-1 fade-in\" src=\"{{ product.images[1] | img_url: '480x'}}\" \/>\n\n<img class=\"product-image-2 fade-in\" src=\"{{ product.images[2] | img_url: '480x'}}\" \/>\n<\/div>"
       }
     }
   },
