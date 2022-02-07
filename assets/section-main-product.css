@@ -53,43 +53,23 @@
 .product-image-2 {
   width: 540px;
   margin-right: -105px;
-  /* opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden; */
 }
 
-.product-image {
-  position: relative;
+
+.effect {
+  opacity: 100%;
+  transition: opacity 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) 100ms;
 }
 
-/* .fade-in {
-  opacity: 0;
-  transition: opacity 250ms ease-in;
+.effect:hover {
+  opacity: 30%;
 }
 
-.fade-in.appear {
-  opacity: 1;
-} */
-
-/* overlay for one product image */
-/* .overlay {
-	opacity: 0;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	background-color: #fffffb85;
-	z-index: 4;
-	transition: opacity 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-} */
-
-/* .product-image:hover .overlay {
-	opacity: 1;
-} */
+.title-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .product-image:hover .product-image2 {
   opacity: 0.3;
@@ -102,6 +82,41 @@
 .product__description {
   font-size: 14px;
 }
+
+
+/* scroll intersection observer css below */
+
+.scroll {
+
+	opacity: 0;
+	transition: all 1s ease-out;
+	transform: translate3d(0, 2rem, 0);
+
+}
+
+.scrolled-in {
+	
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+
+}
+
+/* demo styles */
+body {
+  margin: 0;  
+}
+
+/* div {
+  text-align: center;
+} */
+
+/* img {
+  max-width: 90%;
+  height: auto;
+  margin: 5vw;
+} */
+
+
 
 
 @media screen and (min-width: 750px) {

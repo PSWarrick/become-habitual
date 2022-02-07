@@ -155,6 +155,7 @@
   --white: #FFFFFB;
   --text-black: #121212;
   --button: #121212; 
+  --font: 'Roboto', sans-serif;
 
 }
 
@@ -353,10 +354,15 @@ body,
   font-size: 1.5rem;
   letter-spacing: 0.06rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
-  font-family: var(--font-body-family);
+  /* font-family: var(--font-body-family); */
+  font-family: var(--font);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
   color:var(--text-black);
+}
+
+span, input {
+  font-family: var(--font);
 }
 
 h1,
@@ -370,7 +376,8 @@ h5,
 .h3,
 .h4,
 .h5 {
-  font-family: var(--font-heading-family);
+  /* font-family: var(--font-heading-family); */
+  font-family: var(--font);
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
@@ -587,7 +594,7 @@ h6:empty {
   color: var(--text-black);
   background-color: transparent;
   font-size: 1.4rem;
-  font-family: inherit;
+  font-family: var(--font);
 }
 
 .link--text {
@@ -1440,10 +1447,12 @@ details[open] > .share-button__fallback {
   height: 4.5rem;
   box-sizing: border-box;
   transition: box-shadow var(--duration-short) ease;
+  font-family: var(--font);
 }
 
 .select__select {
-  font-family: var(--font-body-family);
+  /* font-family: var(--font-body-family); */
+  font-family: var(--font);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
   font-size: 1.2rem;
@@ -1884,7 +1893,7 @@ input[type='checkbox'] {
 .header-wrapper {
   display: block;
   position: relative;
-  background-color: rgb(var(--color-background));
+  background-color: var(--text-white);
 }
 
 .header-wrapper--border-bottom {
@@ -2019,17 +2028,17 @@ input[type='checkbox'] {
 }
 
 .header__icon span {
-  height: 100%;
+  height: 100%; 
 }
 
 .header__icon::after {
   content: none;
 }
 
-.header__icon:hover .icon,
+/* .header__icon:hover .icon,
 .modal__close-button:hover .icon {
   transform: scale(1.07);
-}
+} */
 
 .header__icon .icon {
   height: 2rem;
@@ -2176,6 +2185,16 @@ details[open] .modal-overlay::after {
   transform: scale(1);
   transition: transform 150ms ease, opacity 150ms ease;
 }
+
+
+
+.icon-close {
+  color: var(--text-black);
+  margin: 20px 0 0 20px;
+  /* padding: 30px; */
+}
+
+
 
 details:not([open]) > .header__icon--menu .icon-close,
 details[open] > .header__icon--menu .icon-hamburger {
@@ -2348,24 +2367,24 @@ details-disclosure > details {
   word-break: break-word;
 }
 
-.gradient {
-  /* background-image: url("pexels-anna-shvets-50695642-hero.jpg"); */
+/* .gradient {
+
   background-color: var(--white);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 .header {
-  /* background-color: blue; */
   display: flex;
   justify-content: space-between;
 }
 
-.header span {
+/* .header span {
   color: var(--text-black);
   text-decoration: none;
-}
+} */
+
 
 
 
@@ -2379,4 +2398,3 @@ details-disclosure > details {
     stroke: CanvasText;
   }
 }
-
