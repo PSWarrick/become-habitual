@@ -1096,6 +1096,7 @@ summary::-webkit-details-marker {
 
   .grid--peek .grid__item:first-of-type {
     padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .grid--peek .grid__item:last-of-type {
@@ -1894,10 +1895,6 @@ input[type='checkbox'] {
   display: block;
   position: relative;
   background-color: var(--text-white);
-}
-
-.header-wrapper--border-bottom {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
 .header {
